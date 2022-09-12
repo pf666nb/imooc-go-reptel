@@ -12,7 +12,7 @@ func ParseCityList(
 	re := regexp.MustCompile(cityListRe)
 	matches := re.FindAllSubmatch(contents, -1)
 	result := engine.ParseResult{}
-	limit := 1
+	limit := 470
 	for _, m := range matches {
 		result.Items = append(result.Items, "City "+string(m[2]))
 		result.Requests = append(result.Requests, engine.Request{
